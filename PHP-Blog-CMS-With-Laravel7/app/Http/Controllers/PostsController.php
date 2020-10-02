@@ -9,7 +9,7 @@ class PostsController extends Controller
 {
     public function index(){
         $posts = Posts::all();
-        return view();
+        return view('posts');
     }
 
     public function show($id){
