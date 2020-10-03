@@ -17,8 +17,8 @@ class PostsController extends Controller
     }
 
     public function show($id){
-        $post = Posts::find($id);
-        $posts = Posts::all();
-        return view();
+        $post = Posts::where('id', $id)
+        ->first();
+        return view('postshow',['post' => $post]);
     }
 }
