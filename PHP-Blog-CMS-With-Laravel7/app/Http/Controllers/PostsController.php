@@ -22,7 +22,7 @@ class PostsController extends Controller
         return view('postshow',['post' => $post]);
     }
     public function allPosts(){
-        $post = Posts::all();
-        return view('allposts',['post' => $post]);
+        $post = Posts::select()->get();
+        return view('allposts',['posts' => $post]);
     }
 }

@@ -1,6 +1,5 @@
     @include('header')
     <div class="container-fluid row">
-        
         @foreach($posts as $post)
         <div class="card col-3 mr-4 ml-4 mt-4" style="width: 18rem;">
             <div class="card-body">
