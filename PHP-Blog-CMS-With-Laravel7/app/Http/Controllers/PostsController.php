@@ -8,8 +8,12 @@ use Illuminate\Http\Request;
 class PostsController extends Controller
 {
     public function index(){
-        $posts = Posts::all();
-        return view('posts');
+        $posts = Posts::select('*')
+                        ->take(3)
+                        ->orderBy('id', 'desc')
+                        ->get();
+        
+        return view('posts',['posts' => $posts]);
     }
 
     public function show($id){
