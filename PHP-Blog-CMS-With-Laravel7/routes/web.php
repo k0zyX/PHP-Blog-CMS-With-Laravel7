@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/','PostsController@index');
 Route::get('/post/{id}','PostsController@show');
-Route::get('/posts','PostsController@allPosts');
+Route::get('/posts','PostsController@allPosts');d
 
 Auth::routes();
 
