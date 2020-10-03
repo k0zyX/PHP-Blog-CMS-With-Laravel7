@@ -20,8 +20,10 @@ Route::get('/', function () {
 
 Route::get('/','PostsController@index');
 Route::get('/post/{id}','PostsController@show');
-Route::get('/posts','PostsController@allPosts');d
-
+Route::get('/posts','PostsController@allPosts');
+Route::get('/admin',function(){
+    return('authen');
+})->middleware('auth');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
