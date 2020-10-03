@@ -21,4 +21,8 @@ class PostsController extends Controller
         ->first();
         return view('postshow',['post' => $post]);
     }
+    public function allPosts(){
+        $post = Posts::all();
+        return view('allposts',['post' => $post]);
+    }
 }
